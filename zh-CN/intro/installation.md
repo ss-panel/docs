@@ -11,11 +11,11 @@ name: 下载安装
 
 ```
 cd /home/www
-git clone https://github.com/orvice/ss-panel.git
-
+git clone https://github.com/orvice/ss-panel.git 
 ```
 
-### 路径配置
+### 服务器配置  
+
 
 #### Apache设置
 
@@ -41,7 +41,26 @@ location / {
 }    
 ```
 
-### composer安装
+
+### 基本配置
+
+#### 设置权限
+
+确保storage有读写权限:
+
+```
+chmod -R 777 storage
+```
+
+#### 复制一份配置文件
+
+```
+cp .env.example .env
+```
+
+#### 
+
+#### 使用composer安装第三方库
 
 ```
 cd /home/www/ss-panel
@@ -52,5 +71,6 @@ php composer.phar  install
 如果出现错误，请按照错误信息安装相应的php模块，然后再执行 `php composer.phar  install`
 
 
+到此，ss-panel安装完毕，请继续阅读配置。
 
 
