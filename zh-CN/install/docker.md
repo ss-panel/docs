@@ -39,4 +39,10 @@ cd /ss-panel
 wget https://raw.githubusercontent.com/orvice/ss-panel/master/docker-compose.yml
 docker-compose up -d
 ```
+
+### 升级
+
+```
+cd /ss-panel && docker-compose pull && docker-compose stop && docker-compose up -d
+```
  

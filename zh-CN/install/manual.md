@@ -1,5 +1,5 @@
 ---
-name: 下载安装
+name: 常规安装
 ---
 
 ### 下载
@@ -46,7 +46,9 @@ location / {
 
 #### 导入数据库
 
-将db.sql导入数据库中。
+```
+php xcat migrate
+```
 
 #### 设置权限
 
@@ -62,7 +64,7 @@ chmod -R 777 storage
 cp .env.example .env
 ```
 
-#### 
+ 
 
 #### 使用composer安装第三方库
 
@@ -76,5 +78,15 @@ php composer.phar  install
 
 
 到此，ss-panel安装完毕，请继续阅读配置。
+
+
+### 升级
+
+```
+git pull
+php xcat migrate
+```
+
+
 
 
